@@ -1,0 +1,110 @@
+
+
+package services
+
+import (
+   "testing"
+	"fmt"
+	"time"
+	"WS-REST-GO-demo-master/websocket"
+)
+//测试获取合约信息接口
+func Test_FutureContractInfo(t *testing.T) {
+	contractInfo := FutureContractInfo("BTC","","")
+	fmt.Println("获取合约信息: ", contractInfo)
+
+
+}
+//测试获取合约指数信息接口
+func Test_FutureContractIndex(t *testing.T)  {
+	//contract_index := services.FutureContractIndex("BTC")
+	contract_index := FutureContractIndex("BTC")
+	fmt.Println("获取合约指数信息: ", contract_index)
+
+}
+//获取订单明细信息
+func Test_FutureContractOrderDetail(t *testing.T)  {
+	contract_order_detail := FutureContractOrderDetail("BTC", "123456", "1", "100","1539345271124","1")
+	fmt.Println("获取订单明细信息: ", contract_order_detail)
+
+
+}
+//合约取消订单
+func Test_FutureContractCancel(t *testing.T)  {
+	contract_cancel := FutureContractCancel("123456","BTC", "123456")
+	fmt.Println("合约取消订单: ", contract_cancel)
+
+}
+
+//合约全部撤单
+func Test_FutureContractCancelall(t *testing.T)  {
+	contract_cancelall := FutureContractCancelall("BTC")
+	fmt.Println("合约全部撤单: ", contract_cancelall)
+
+}
+//获取合约当前未成交委托
+func Test_FutureContractOpenorders(t *testing.T)  {
+	contract_openorders := FutureContractOpenorders("BTC", "1", "100")
+	fmt.Println("获取合约当前未成交委托: ", contract_openorders)
+
+}
+
+
+//获取合约历史委托
+func Test_FutureContractHisorders(t *testing.T)  {
+	contract_hisorders :=FutureContractHisorders("BTC", "0", "1", "0", "90", "1", "20")
+	fmt.Println("获取合约历史委托: ", contract_hisorders)
+	time.Sleep(time.Second)
+
+}
+
+//测试合约下单接口
+func Test_FutureContractOrder(t *testing.T)  {
+	//合约下单
+	contract_order := FutureContractOrder("BTC", "this_week", "BTC181214", "", "6188", "12",
+		"buy", "open", "10", "limit")
+	fmt.Println("合约下单: ", contract_order)
+
+}
+
+
+//测试批量下单接口
+func Test_FutureContractBatchorder(t *testing.T)  {
+	//合约批量下单
+	orders := make([]*Order,0)
+	order1 := &Order{
+		Symbol :           "BTC",
+		ContractType :     "this_week",
+		ContractCode :     "BTC181214",
+		ClientOrderId :    "10",
+		Price    :         "6188",
+		Volume   :         "1",
+		Cirection :        "buy",
+		Offset :           "open",
+		LeverRate :        "10",
+		OrderPriceType :   "limit",
+	}
+	order2 := &Order{
+		Symbol :           "BTC",
+		ContractType :     "this_week",
+		ContractCode :     "BTC181214",
+		ClientOrderId :    "12",
+		Price    :         "6188",
+		Volume   :         "2",
+		Cirection :        "buy",
+		Offset :           "open",
+		LeverRate :        "10",
+		OrderPriceType :   "limit",
+	}
+	orders = append(orders ,order1)
+	orders = append(orders ,order2)
+
+	contract_batchorder := FutureContractBatchorder(orders)
+	fmt.Println("合约批量下单: ", contract_batchorder)
+
+}
+//测试 WebSocket 行情,交易 API
+func Test_Websocket(t *testing.T)  {
+
+  websocket.Run()
+}
