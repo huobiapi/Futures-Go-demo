@@ -10,11 +10,12 @@ import (
 	"encoding/binary"
 	"io/ioutil"
 	"golang.org/x/net/websocket"
+	"Futures-Go-demo/config"
 )
 
 
 var origin = "http://www.baidu.com"
-var url = "wss://www.hbdm.com/ws"
+//var url = "wss://www.hbdm.com/ws"
 var buffer bytes.Buffer
 
 func ParseGzip(data []byte, handleErr bool) ([]byte, error) {
@@ -62,7 +63,7 @@ func send(message []byte, ws *websocket.Conn) {
 }
 
 func Run() {
-	ws, err := websocket.Dial(url, "", origin)
+	ws, err := websocket.Dial(config.WS_URL, "", origin)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -103,8 +104,8 @@ func Run() {
 	 symbol	true	string	交易对		如"BTC_CW"表示BTC当周合约，"BTC_NW"表示BTC次周合约，"BTC_CQ"表示BTC季度合约.
      type	true	string	Depth 类型		step0, step1, step2, step3, step4, step5（合并深度0-5）；step0时，不合并深度
 	  */
-	//message = []byte("{\"Sub\":\"market.BTC_CW.depth.step0\"}")
-	//send(message, ws)
+	message = []byte("{\"Sub\":\"market.BTC_CW.depth.step0\"}")
+	send(message, ws)
 
 
 

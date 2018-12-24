@@ -2,21 +2,21 @@ package services
 
 import (
 	"strconv"
-	"WS-REST-GO-demo-master/config"
-	"WS-REST-GO-demo-master/untils"
+	"Futures-Go-demo/config"
+	"Futures-Go-demo/untils"
 )
 
 type Order struct {
-	Symbol          string
-	ContractType        string
-	ContractCode      string
-	ClientOrderId           string
-	Price          string
-	Volume          string
-	Cirection string
-	Offset    string
-	LeverRate       string
-	OrderPriceType  string
+	Symbol          string  `json:"symbol"`
+	ContractType        string `json:"contractType"`
+	ContractCode      string    `json:"contractCode"`
+	ClientOrderId           string `json:"clientOrderId"`
+	Price          string  `json:"price"`
+	Volume          string  `json:"volume"`
+	Direction string     `json:"direction"`
+	Offset    string     `json:"offset"`
+	LeverRate       string   `json:"leverRate"`
+	OrderPriceType  string    `json:"orderPriceType"`
 
 }
 //------------------------------------------------------------------------------------------
@@ -247,7 +247,7 @@ func FutureContractOrderDetail( symbol,  orderId,  pageIndex,  pageSize, created
 	params :=make(map[string]string)
 	params["symbol"] = symbol
 	params["order_id"] = orderId
-	params["create_at"] = createdAt
+	params["created_at"] = createdAt
 	params["page_index"] = pageIndex
 	params["page_size"] = pageSize
 	params["order_type"] = orderType
@@ -380,33 +380,15 @@ func FutureContractCancel(orderId,symbol ,client_order_id string) string {
     /**
 	 * 批量下单
 	 *
-	 * @param symbol
-	 *            "BTC","ETH"...
-	 * @param contractType
-	 *            合约类型: this_week:当周 next_week:下周 month:当月 quarter:季度
-	 * @param contractCode
-	 *            BTC1403
-	 * @param client_order_id
-	 *            客户自己填写和维护，这次一定要大于上一次
-	 * @param price
-	 *            价格
-	 * @param volume
-	 *            委托数量(张)
-	 * @param direction
-	 *            "buy":买 "sell":卖
-	 * @param offset
-	 *            "open":开 "close":平
-	 * @param leverRate
-	 *            杠杆倍数[“开仓”若有10倍多单，就不能再下20倍多单]
-	 * @param orderPriceType
-	 *            "limit":限价 "opponent":对手价
+	 * @param orders_data   订单数组切片
+
 	 * @return
 	 */
-func FutureContractBatchorder(orders [] *Order) string {
+func FutureContractBatchorder(orders_data [] *Order) string {
 
 	strRequest := "/api/v1/contract_batchorder"
 	params :=make(map[string]interface{})
-	params["orders_data"] = orders
+	params["orders_data"] = orders_data
 	json := untils.ApiKeyPostBatchorder(params, strRequest)
 
 	return json

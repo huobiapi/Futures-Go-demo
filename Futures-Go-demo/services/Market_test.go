@@ -6,7 +6,7 @@ import (
    "testing"
 	"fmt"
 	"time"
-	"WS-REST-GO-demo-master/websocket"
+	"Futures-Go-demo/websocket"
 )
 //测试获取合约信息接口
 func Test_FutureContractInfo(t *testing.T) {
@@ -24,7 +24,7 @@ func Test_FutureContractIndex(t *testing.T)  {
 }
 //获取订单明细信息
 func Test_FutureContractOrderDetail(t *testing.T)  {
-	contract_order_detail := FutureContractOrderDetail("BTC", "123456", "1", "100","1539345271124","1")
+	contract_order_detail := FutureContractOrderDetail("BTC", "123556", "1", "100","1539345271124","1")
 	fmt.Println("获取订单明细信息: ", contract_order_detail)
 
 
@@ -71,36 +71,42 @@ func Test_FutureContractOrder(t *testing.T)  {
 //测试批量下单接口
 func Test_FutureContractBatchorder(t *testing.T)  {
 	//合约批量下单
-	orders := make([]*Order,0)
+	ordersData := make([] *Order,0)
 	order1 := &Order{
-		Symbol :           "BTC",
-		ContractType :     "this_week",
-		ContractCode :     "BTC181214",
-		ClientOrderId :    "10",
-		Price    :         "6188",
-		Volume   :         "1",
-		Cirection :        "buy",
-		Offset :           "open",
-		LeverRate :        "10",
-		OrderPriceType :   "limit",
-	}
-	order2 := &Order{
-		Symbol :           "BTC",
-		ContractType :     "this_week",
-		ContractCode :     "BTC181214",
-		ClientOrderId :    "12",
-		Price    :         "6188",
-		Volume   :         "2",
-		Cirection :        "buy",
-		Offset :           "open",
-		LeverRate :        "10",
-		OrderPriceType :   "limit",
-	}
-	orders = append(orders ,order1)
-	orders = append(orders ,order2)
 
-	contract_batchorder := FutureContractBatchorder(orders)
-	fmt.Println("合约批量下单: ", contract_batchorder)
+		Symbol : "BTC",
+		ContractType :"quarter",
+		ContractCode : "BTC181228",
+		ClientOrderId : "10",
+		Price : "6188",
+		Volume : "1",
+		Direction : "buy",
+		Offset : "open",
+		LeverRate : "10",
+		OrderPriceType : "limit",
+
+	}
+
+	ordersData = append(ordersData,order1)
+	order2 := &Order{
+
+		Symbol : "BTC",
+		ContractType :"quarter",
+		ContractCode : "BTC181228",
+		ClientOrderId : "11",
+		Price : "6189",
+		Volume : "2",
+		Direction : "buy",
+		Offset : "open",
+		LeverRate : "10",
+		OrderPriceType : "limit",
+
+	}
+	ordersData= append(ordersData,order2)
+	fmt.Println("ordersData:",ordersData)
+
+	contract_batchorder := FutureContractBatchorder(ordersData)
+	fmt.Println("合约批量下单ordersDataResult: ", contract_batchorder)
 
 }
 //测试 WebSocket 行情,交易 API
