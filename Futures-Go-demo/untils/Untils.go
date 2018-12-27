@@ -244,25 +244,6 @@ func CreateSign(mapParams map[string]string, strMethod, strHostUrl, strRequestPa
 func CreatePrivateSignByJWT(sign string) (string, error) {
 	return SignByJWT(config.PRIVATE_KEY_PRIME_256, sign)
 }
-
-// 对Map按着ASCII码进行排序
-// mapValue: 需要进行排序的map
-// return: 排序后的map
-func MapSortByKey(mapValue map[string]string) map[string]string {
-	var keys []string
-	for key := range mapValue {
-		keys = append(keys, key)
-	}
-	sort.Strings(keys)
-
-	mapReturn := make(map[string]string)
-	for _, key := range keys {
-		mapReturn[key] = mapValue[key]
-	}
-
-	return mapReturn
-}
-
 // 对Map的值进行URI编码
 // mapParams: 需要进行URI编码的map
 // return: 编码后的map
