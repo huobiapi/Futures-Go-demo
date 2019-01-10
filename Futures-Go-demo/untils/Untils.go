@@ -1,6 +1,7 @@
 package untils
 
 import (
+	"Futures-Go-demo/config"
 	"crypto/hmac"
 	"crypto/sha256"
 	"encoding/base64"
@@ -12,8 +13,6 @@ import (
 	"sort"
 	"strings"
 	"time"
-
-	"Futures-Go-demo/config"
 )
 
 // Http Get请求基础函数, 通过封装Go语言Http请求, 支持火币网REST API的HTTP Get请求
@@ -82,6 +81,7 @@ func HttpPostRequestBatchorder(strUrl string, mapParams map[string]interface{}) 
 
 	return string(body)
 }
+
 // Http POST请求基础函数, 通过封装Go语言Http请求, 支持火币网REST API的HTTP POST请求
 // strUrl: 请求的URL
 // mapParams: map类型的请求参数
@@ -123,15 +123,16 @@ func HttpPostRequest(strUrl string, mapParams map[string]string) string {
 // return: 请求结果
 func ApiKeyGet(mapParams map[string]string, strRequestPath string) string {
 	strMethod := "GET"
-	//timestamp := time.Now().UTC().Format("2006-01-02T15:04:05")
-	//timestamp := time.Now().UTC().Format("2018-12-09T08:27:56")
+	//timestamp111 := time.Now().UTC().Format("2006-01-02T15:04:05")
+	timestamp := time.Now().UTC().Format("2018-12-09T08:27:56")
 
-	t := time.Now()
-	temp := time.Date(t.Year(), t.Month(), t.Day(), t.Hour()-8, t.Minute(), t.Second(), t.Nanosecond(), time.Local)
-	timestamp := temp.Format("2006-01-02T15:04:05")
-	//fmt.Println(t,":timestamp:",timestamp)
+	// t := time.Now()
+	// temp := time.Date(t.Year(), t.Month(), t.Day(), t.Hour()-8, t.Minute(), t.Second(), t.Nanosecond(), time.Local)
+	// timestamp := temp.Format("2006-01-02T15:04:05")
 
-//"Timestamp" -> "2018-12-09T08:27:56"
+	//fmt.Println(temp,":timestamp1:",time.Local,timestamp111)
+	//fmt.Println(temp,":timestamp2:",time.Local,timestamp)
+	//"Timestamp" -> "2018-12-09T08:27:56"
 	mapParams["AccessKeyId"] = config.ACCESS_KEY
 	mapParams["SignatureMethod"] = "HmacSHA256"
 	mapParams["SignatureVersion"] = "2"
@@ -155,11 +156,12 @@ func ApiKeyGet(mapParams map[string]string, strRequestPath string) string {
 }
 func ApiKeyPostBatchorder(mapParams map[string]interface{}, strRequestPath string) string {
 	strMethod := "POST"
-	//timestamp := time.Now().UTC().Format("2006-01-02T15:04:05")
-	t := time.Now()
-	temp := time.Date(t.Year(), t.Month(), t.Day(), t.Hour()-8, t.Minute(), t.Second(), t.Nanosecond(), time.Local)
-	timestamp := temp.Format("2006-01-02T15:04:05")
-	//fmt.Println(t,":timestamp:",timestamp)
+	timestamp := time.Now().UTC().Format("2006-01-02T15:04:05")
+
+	// t := time.Now()
+	// temp := time.Date(t.Year(), t.Month(), t.Day(), t.Hour()-8, t.Minute(), t.Second(), t.Nanosecond(), time.Local)
+	// timestamp := temp.Format("2006-01-02T15:04:05")
+	// fmt.Println(t, ":timestamp:", timestamp)
 
 	mapParams2Sign := make(map[string]string)
 	mapParams2Sign["AccessKeyId"] = config.ACCESS_KEY
@@ -185,16 +187,17 @@ func ApiKeyPostBatchorder(mapParams map[string]interface{}, strRequestPath strin
 
 	return HttpPostRequestBatchorder(strUrl, mapParams)
 }
+
 // 进行签名后的HTTP POST请求, 参考官方Python Demo写的
 // mapParams: map类型的请求参数, key:value
 // strRequest: API路由路径
 // return: 请求结果
 func ApiKeyPost(mapParams map[string]string, strRequestPath string) string {
 	strMethod := "POST"
-	//timestamp := time.Now().UTC().Format("2006-01-02T15:04:05")
-	t := time.Now()
-	temp := time.Date(t.Year(), t.Month(), t.Day(), t.Hour()-8, t.Minute(), t.Second(), t.Nanosecond(), time.Local)
-	timestamp := temp.Format("2006-01-02T15:04:05")
+	timestamp := time.Now().UTC().Format("2006-01-02T15:04:05")
+	// t := time.Now()
+	// temp := time.Date(t.Year(), t.Month(), t.Day(), t.Hour()-8, t.Minute(), t.Second(), t.Nanosecond(), time.Local)
+	// timestamp := temp.Format("2006-01-02T15:04:05")
 	//fmt.Println(t,":timestamp:",timestamp)
 
 	mapParams2Sign := make(map[string]string)
@@ -244,6 +247,25 @@ func CreateSign(mapParams map[string]string, strMethod, strHostUrl, strRequestPa
 func CreatePrivateSignByJWT(sign string) (string, error) {
 	return SignByJWT(config.PRIVATE_KEY_PRIME_256, sign)
 }
+
+// 对Map按着ASCII码进行排序
+// mapValue: 需要进行排序的map
+// return: 排序后的map
+func MapSortByKey(mapValue map[string]string) map[string]string {
+	var keys []string
+	for key := range mapValue {
+		keys = append(keys, key)
+	}
+	sort.Strings(keys)
+
+	mapReturn := make(map[string]string)
+	for _, key := range keys {
+		mapReturn[key] = mapValue[key]
+	}
+
+	return mapReturn
+}
+
 // 对Map的值进行URI编码
 // mapParams: 需要进行URI编码的map
 // return: 编码后的map
