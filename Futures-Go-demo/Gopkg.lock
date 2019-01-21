@@ -8,14 +8,26 @@
   version = "v3.2.0"
 
 [[projects]]
+  name = "github.com/gorilla/websocket"
+  packages = ["."]
+  revision = "66b9c49e59c6c48f0ffce28c2d8b8a5678502c6d"
+  version = "v1.4.0"
+
+[[projects]]
+  name = "github.com/spf13/cast"
+  packages = ["."]
+  revision = "8c9545af88b134710ab1cd196795e7f2388358d7"
+  version = "v1.3.0"
+
+[[projects]]
   branch = "master"
   name = "golang.org/x/net"
   packages = ["websocket"]
-  revision = "610586996380ceef02dd726cc09df7e00a3f8e56"
+  revision = "ed066c81e75eba56dd9bd2139ade88125b855585"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "6f2fbc8453441ae218b2e15f5a48c34119f70e6adfd2b96eb414ca778749ea22"
+  inputs-digest = "321c01bd23c7524ac151248aa50eae968611566a9645a3c406e63e009dabd5a1"
   solver-name = "gps-cdcl"
   solver-version = 1

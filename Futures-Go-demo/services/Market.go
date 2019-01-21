@@ -27,7 +27,7 @@ type Order struct {
 	 * @param symbol
 	 *            "BTC","ETH"...
 	 * @param period
-	 *            K线类型 1min, 5min, 15min, 30min, 60min, 1hour,4hour,1day, 1mon
+	 *            K线类型 1min, 5min, 15min, 30min, 60min,4hour,1day, 1mon
 	 * @return
 	 */
 
@@ -74,7 +74,8 @@ func FutureMarketDetailMerged(strSymbol string) string {
 	  * @param symbol
 	  *            "BTC","ETH"...
 	  * @param type
-	  *            step0, step1, step2, step3, step4, step5（合并深度0-5）；step0时，不合并深度
+	  * 	(150档数据)	step0, step1, step2, step3, step4, step5（合并深度1-5）；step0时，不合并深度
+	  *     (20档数据)  step6, step7, step8, step9, step10, step11（合并深度7-11）；step6时，不合并深度
 	  * @return
 	  */
 func FutureMarketDepth(strSymbol, strType string) string {
