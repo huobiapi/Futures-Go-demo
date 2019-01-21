@@ -123,6 +123,7 @@ func HttpPostRequest(strUrl string, mapParams map[string]string) string {
 // return: 请求结果
 func ApiKeyGet(mapParams map[string]string, strRequestPath string) string {
 	strMethod := "GET"
+<<<<<<< HEAD
 
 	timestamp := time.Now().UTC().Format("2018-12-09T08:27:56")
 
@@ -130,6 +131,15 @@ func ApiKeyGet(mapParams map[string]string, strRequestPath string) string {
 	// temp := time.Date(t.Year(), t.Month(), t.Day(), t.Hour()-8, t.Minute(), t.Second(), t.Nanosecond(), time.Local)
 	// timestamp := temp.Format("2006-01-02T15:04:05")
 
+=======
+	//timestamp111 := time.Now().UTC().Format("2006-01-02T15:04:05")
+	timestamp := time.Now().UTC().Format("2018-12-09T08:27:56")
+
+	// t := time.Now()
+	// temp := time.Date(t.Year(), t.Month(), t.Day(), t.Hour()-8, t.Minute(), t.Second(), t.Nanosecond(), time.Local)
+	// timestamp := temp.Format("2006-01-02T15:04:05")
+
+>>>>>>> origin/master
 	//fmt.Println(temp,":timestamp1:",time.Local,timestamp111)
 	//fmt.Println(temp,":timestamp2:",time.Local,timestamp)
 	//"Timestamp" -> "2018-12-09T08:27:56"
@@ -196,9 +206,15 @@ func ApiKeyPost(mapParams map[string]string, strRequestPath string) string {
 	strMethod := "POST"
 	timestamp := time.Now().UTC().Format("2006-01-02T15:04:05")
 	// t := time.Now()
+<<<<<<< HEAD
 	// temp := time.Date(t.Year(), t.Month(), t.Day(), t.Hour()-6, t.Minute(), t.Second(), t.Nanosecond(), time.Local)
 	// timestamp := temp.Format("2006-01-02T15:04:05")
 	fmt.Println(":timestamp:", timestamp)
+=======
+	// temp := time.Date(t.Year(), t.Month(), t.Day(), t.Hour()-8, t.Minute(), t.Second(), t.Nanosecond(), time.Local)
+	// timestamp := temp.Format("2006-01-02T15:04:05")
+	//fmt.Println(t,":timestamp:",timestamp)
+>>>>>>> origin/master
 
 	mapParams2Sign := make(map[string]string)
 	mapParams2Sign["AccessKeyId"] = config.ACCESS_KEY
