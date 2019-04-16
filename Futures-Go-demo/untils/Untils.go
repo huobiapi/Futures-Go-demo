@@ -123,7 +123,6 @@ func HttpPostRequest(strUrl string, mapParams map[string]string) string {
 // return: 请求结果
 func ApiKeyGet(mapParams map[string]string, strRequestPath string) string {
 	strMethod := "GET"
-<<<<<<< HEAD
 
 	timestamp := time.Now().UTC().Format("2018-12-09T08:27:56")
 
@@ -131,15 +130,6 @@ func ApiKeyGet(mapParams map[string]string, strRequestPath string) string {
 	// temp := time.Date(t.Year(), t.Month(), t.Day(), t.Hour()-8, t.Minute(), t.Second(), t.Nanosecond(), time.Local)
 	// timestamp := temp.Format("2006-01-02T15:04:05")
 
-=======
-	//timestamp111 := time.Now().UTC().Format("2006-01-02T15:04:05")
-	timestamp := time.Now().UTC().Format("2018-12-09T08:27:56")
-
-	// t := time.Now()
-	// temp := time.Date(t.Year(), t.Month(), t.Day(), t.Hour()-8, t.Minute(), t.Second(), t.Nanosecond(), time.Local)
-	// timestamp := temp.Format("2006-01-02T15:04:05")
-
->>>>>>> origin/master
 	//fmt.Println(temp,":timestamp1:",time.Local,timestamp111)
 	//fmt.Println(temp,":timestamp2:",time.Local,timestamp)
 	//"Timestamp" -> "2018-12-09T08:27:56"
@@ -163,6 +153,43 @@ func ApiKeyGet(mapParams map[string]string, strRequestPath string) string {
 	strUrl := config.TRADE_URL + strRequestPath
 
 	return HttpGetRequest(strUrl, MapValueEncodeURI(mapParams))
+}
+
+
+// 进行签名后的HTTP GET请求, 参考官方Python Demo写的
+// mapParams: map类型的请求参数, key:value
+// strRequest: API路由路径
+// return: 请求结果
+func ApiKeyGetOrder(mapParams map[string]string, strRequestPath string) map[string]string {
+	strMethod := "GET"
+
+
+	timestamp := time.Now().UTC().Format("2006-01-02T15:04:05")
+	//设置所在的时区
+	//var   timezone int
+	//timezone = 8
+	//t := time.Now()
+	//temp := time.Date(t.Year(), t.Month(), t.Day(), t.Hour()-timezone, t.Minute(), t.Second(), t.Nanosecond(), time.Local)
+	//timestamp := temp.Format("2006-01-02T15:04:05")
+
+
+	mapParams["AccessKeyId"] = config.ACCESS_KEY
+	mapParams["SignatureMethod"] = "HmacSHA256"
+	mapParams["SignatureVersion"] = "2"
+	mapParams["Timestamp"] = timestamp
+
+
+	hostName := config.HOST_NAME
+
+	mapParams["Signature"] = CreateSign(mapParams, strMethod, hostName, strRequestPath, config.SECRET_KEY)
+
+
+
+	mapParams["op"] = "auth"
+	mapParams["type"] = "api"
+
+	return  mapParams
+
 }
 func ApiKeyPostBatchorder(mapParams map[string]interface{}, strRequestPath string) string {
 	strMethod := "POST"
@@ -206,15 +233,9 @@ func ApiKeyPost(mapParams map[string]string, strRequestPath string) string {
 	strMethod := "POST"
 	timestamp := time.Now().UTC().Format("2006-01-02T15:04:05")
 	// t := time.Now()
-<<<<<<< HEAD
 	// temp := time.Date(t.Year(), t.Month(), t.Day(), t.Hour()-6, t.Minute(), t.Second(), t.Nanosecond(), time.Local)
 	// timestamp := temp.Format("2006-01-02T15:04:05")
-	fmt.Println(":timestamp:", timestamp)
-=======
-	// temp := time.Date(t.Year(), t.Month(), t.Day(), t.Hour()-8, t.Minute(), t.Second(), t.Nanosecond(), time.Local)
-	// timestamp := temp.Format("2006-01-02T15:04:05")
-	//fmt.Println(t,":timestamp:",timestamp)
->>>>>>> origin/master
+	//fmt.Println(":timestamp:", timestamp)
 
 	mapParams2Sign := make(map[string]string)
 	mapParams2Sign["AccessKeyId"] = config.ACCESS_KEY
@@ -241,6 +262,48 @@ func ApiKeyPost(mapParams map[string]string, strRequestPath string) string {
 	return HttpPostRequest(strUrl, mapParams)
 }
 
+// 进行签名后的HTTP POST请求, 参考官方Python Demo写的
+// mapParams: map类型的请求参数, key:value
+// strRequest: API路由路径
+// return: 请求结果
+func ApiKeyPostOrder(mapParams map[string]string, strRequestPath string) map[string]string {
+	strMethod := "POST"
+	timestamp := time.Now().UTC().Format("2006-01-02T15:04:05")
+	/*
+	 "op": "auth",
+  "type": "api",
+
+
+
+
+	 */
+
+	mapParams2Sign := make(map[string]string)
+	mapParams2Sign["AccessKeyId"] = config.ACCESS_KEY
+	mapParams2Sign["SignatureMethod"] = "HmacSHA256"
+	mapParams2Sign["SignatureVersion"] = "2"
+	mapParams2Sign["Timestamp"] = timestamp
+	mapParams2Sign["op"] = "auth"
+	mapParams2Sign["type"] = "api"
+	hostName := config.HOST_NAME
+
+	mapParams2Sign["Signature"] = CreateSign(mapParams2Sign, strMethod, hostName, strRequestPath, config.SECRET_KEY)
+
+	if config.ENABLE_PRIVATE_SIGNATURE == true {
+		privateSignature, err := CreatePrivateSignByJWT(mapParams2Sign["Signature"])
+
+		if nil == err {
+			mapParams2Sign["PrivateSignature"] = privateSignature
+		} else {
+			fmt.Println("signed error:", err)
+		}
+	}
+
+	//strUrl := config.TRADE_URL + strRequestPath + "?" + Map2UrlQuery(MapValueEncodeURI(mapParams2Sign))
+    return  mapParams2Sign
+
+
+}
 // 构造签名
 // mapParams: 送进来参与签名的参数, Map类型
 // strMethod: 请求的方法 GET, POST......

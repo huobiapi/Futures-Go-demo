@@ -7,14 +7,12 @@ const (
 	SECRET_KEY string = "*" // huobi申请的secretKey  必填
 
 
-
-
-
 	// API请求地址, 不要带最后的/
 	MARKET_URL string = "https://api.hbdm.com"
 	TRADE_URL  string = "https://api.hbdm.com"
 	WS_URL     string = "wss://www.hbdm.com/ws"
-	Local_IP string = "*.*.*.*"  //本地IP地址,选填
+	WS_ORDER_URL  string = "ws://api.hbdm.com/notification"
+	Local_IP   string = "*.*.*.*" //本地IP地址 Your Local IP  选填
 
 	//replace with real URLs and HostName
 	HOST_NAME string = "api.hbdm.com"

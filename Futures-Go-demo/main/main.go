@@ -2,9 +2,9 @@ package main
 
 import (
 	"Futures-Go-demo/services"
+	"Futures-Go-demo/websocket"
 	"fmt"
 	"time"
-	"Futures-Go-demo/websocket"
 )
 
 func main() {
@@ -39,7 +39,7 @@ func main() {
 
 	// 获取K线数据
 	kline := services.FutureMarketHistoryKline("BTC_CW", "1min", 10)
-	fmt.Println(time.Now().Format("2006-01-02 15:04:05.000000"), "  获取K线数据:", kline)
+	fmt.Println(time.Now().Format("2006-01-02 15:04:05.000000"), "获取K线数据:", kline)
 	time.Sleep(time.Second / 10)
 
 	// 获取聚合行情
@@ -152,9 +152,16 @@ func main() {
 	// WebSocket 行情,交易 API
 	fmt.Println()
 	fmt.Println("********************websocket  Run******************************")
-	websocket.WSRun()  //无需本地IP地址，直接运行
 
+	// WebSocket 行情,交易 API
+	//websocket.WSRun()  //无需本地IP地址，直接运行
 	//websocket.WSRunWithIP(config.Local_IP) //配置文件须填写本地IP地址，WS运行太久，外部原因可能断开，支持自动重连
+
+
+
+	//WebSocket 订单推送 API
+	websocket.WSWithOrder()
+
 
 
 }

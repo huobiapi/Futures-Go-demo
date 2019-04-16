@@ -11,25 +11,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Market.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Market.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/Market.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="90" column="7" selection-start-line="90" selection-start-column="7" selection-end-line="90" selection-end-column="7" />
+            <state relative-caret-position="-1609">
+              <caret line="300" column="5" selection-start-line="300" selection-start-column="5" selection-end-line="300" selection-end-column="5" />
               <folding>
                 <element signature="e#18#91#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ws_new.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/websocket/ws_new.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="175" column="79" selection-start-line="175" selection-start-column="79" selection-end-line="175" selection-end-column="79" />
-              <folding>
-                <element signature="e#19#225#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -38,40 +26,49 @@
       <file leaf-file-name="config.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/config.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="210">
+              <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/main.go">
+      <file leaf-file-name="ws.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/websocket/ws.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="633">
-              <caret line="160" selection-start-line="160" selection-end-line="160" />
+            <state relative-caret-position="675">
+              <caret line="55" selection-start-line="55" selection-end-line="61" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CryptoUtil.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/untils/CryptoUtil.go">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+            <state relative-caret-position="225">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ws_new.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/websocket/ws_new.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-346">
+              <caret line="218" column="5" selection-start-line="218" selection-start-column="5" selection-end-line="218" selection-end-column="5" />
               <folding>
-                <element signature="e#16#57#0" expanded="true" />
+                <element signature="e#19#222#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Market_test.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/services/Market_test.go">
+      <file leaf-file-name="ws_order.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/websocket/ws_order.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="582">
-              <caret line="113" column="57" selection-start-line="113" selection-start-column="57" selection-end-line="113" selection-end-column="57" />
+            <state relative-caret-position="539">
+              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
               <folding>
-                <element signature="e#18#83#0" expanded="true" />
+                <element signature="e#19#127#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,29 +77,44 @@
       <file leaf-file-name="Untils.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/untils/Untils.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4605">
-              <caret line="320" column="16" selection-start-line="320" selection-start-column="16" selection-end-line="320" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ws.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/websocket/ws.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-57">
-              <caret line="113" column="79" selection-start-line="113" selection-start-column="79" selection-end-line="113" selection-end-column="79" />
+            <state relative-caret-position="15">
+              <caret line="162" column="5" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="5" />
               <folding>
-                <element signature="e#19#158#0" expanded="true" />
+                <element signature="e#16#190#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="CryptoUtil.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/untils/CryptoUtil.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="19" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="19" />
+            <state relative-caret-position="195">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="e#16#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+              <folding>
+                <element signature="e#14#96#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Market_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/services/Market_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1650">
+              <caret line="116" selection-start-line="116" selection-end-line="116" />
             </state>
           </provider>
         </entry>
@@ -115,20 +127,28 @@
       <find>FutureContractOrderInfo</find>
       <find>contract_order_detail</find>
       <find>connection num</find>
+      <find>offset</find>
+      <find>Map2UrlQuery</find>
+      <find>SECRET_KEY</find>
+      <find>reCreateClient</find>
+      <find>send</find>
     </findStrings>
   </component>
   <component name="GOROOT" path="/usr/local/Cellar/go/1.10.2/libexec" />
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/untils/Untils.go" />
         <option value="$PROJECT_DIR$/websocket/ws_benchmark0120.go" />
         <option value="$PROJECT_DIR$/services/Market.go" />
-        <option value="$PROJECT_DIR$/config/config.go" />
-        <option value="$PROJECT_DIR$/main/main.go" />
-        <option value="$PROJECT_DIR$/services/Market_test.go" />
-        <option value="$PROJECT_DIR$/websocket/ws.go" />
         <option value="$PROJECT_DIR$/websocket/ws_new.go" />
+        <option value="$PROJECT_DIR$/websocket/ws_order_ip.go" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/services/Market_test.go" />
+        <option value="$PROJECT_DIR$/untils/Untils.go" />
+        <option value="$PROJECT_DIR$/websocket/ws.go" />
+        <option value="$PROJECT_DIR$/websocket/ws_order.go" />
+        <option value="$PROJECT_DIR$/main/main.go" />
+        <option value="$PROJECT_DIR$/config/config.go" />
       </list>
     </option>
   </component>
@@ -142,9 +162,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="847" />
+    <option name="x" value="110" />
+    <option name="y" value="34" />
+    <option name="width" value="1287" />
+    <option name="height" value="836" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -167,16 +188,22 @@
             <path>
               <item name="Futures-Go-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="Futures-Go-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Futures-Go-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Futures-Go-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Futures-Go-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Futures-Go-demo" type="462c0819:PsiDirectoryNode" />
               <item name="untils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Futures-Go-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="Futures-Go-demo" type="462c0819:PsiDirectoryNode" />
               <item name="websocket" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Futures-Go-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
               <item name="Futures-Go-demo" type="b2602c69:ProjectViewProjectNode" />
@@ -195,6 +222,11 @@
     <property name="last_opened_file_path" value="$USER_HOME$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/websocket" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -218,15 +250,15 @@
       <package value="Futures-Go-demo" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
-    <configuration name="go build ws_benchmark0120.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build ws_order.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Futures-Go-demo" />
       <working_directory value="$PROJECT_DIR$/" />
       <go_parameters value="-i" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/websocket/ws_benchmark0120.go" />
+      <filePath value="$PROJECT_DIR$/websocket/ws_order.go" />
       <directory value="$PROJECT_DIR$/" />
     </configuration>
-    <configuration name="Test_FutureContractIndex in Futures-Go-demo/services" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_FutureContractOpenorders in Futures-Go-demo/services" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Futures-Go-demo" />
       <working_directory value="$PROJECT_DIR$/services" />
       <go_parameters value="-i" />
@@ -235,9 +267,9 @@
       <package value="Futures-Go-demo/services" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^Test_FutureContractIndex$" />
+      <pattern value="^Test_FutureContractOpenorders$" />
     </configuration>
-    <configuration name="Test_FutureContractOrderDetail in Futures-Go-demo/services" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_FutureContractOrder in Futures-Go-demo/services" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Futures-Go-demo" />
       <working_directory value="$PROJECT_DIR$/services" />
       <go_parameters value="-i" />
@@ -246,9 +278,9 @@
       <package value="Futures-Go-demo/services" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^Test_FutureContractOrderDetail$" />
+      <pattern value="^Test_FutureContractOrder$" />
     </configuration>
-    <configuration name="Test_Websocket in Futures-Go-demo/services" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_Websocket_order in Futures-Go-demo/services" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="Futures-Go-demo" />
       <working_directory value="$PROJECT_DIR$/services" />
       <go_parameters value="-i" />
@@ -257,71 +289,80 @@
       <package value="Futures-Go-demo/services" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^Test_Websocket$" />
+      <pattern value="^Test_Websocket_order$" />
     </configuration>
     <list>
       <item itemvalue="Go Build.go build main.go" />
-      <item itemvalue="Go Test.Test_FutureContractIndex in Futures-Go-demo/services" />
-      <item itemvalue="Go Test.Test_Websocket in Futures-Go-demo/services" />
-      <item itemvalue="Go Test.Test_FutureContractOrderDetail in Futures-Go-demo/services" />
-      <item itemvalue="Go Build.go build ws_benchmark0120.go" />
+      <item itemvalue="Go Test.Test_FutureContractOpenorders in Futures-Go-demo/services" />
+      <item itemvalue="Go Test.Test_FutureContractOrder in Futures-Go-demo/services" />
+      <item itemvalue="Go Build.go build ws_order.go" />
+      <item itemvalue="Go Test.Test_Websocket_order in Futures-Go-demo/services" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Go Build.go build main.go" />
-        <item itemvalue="Go Test.Test_Websocket in Futures-Go-demo/services" />
-        <item itemvalue="Go Build.go build ws_benchmark0120.go" />
-        <item itemvalue="Go Test.Test_FutureContractOrderDetail in Futures-Go-demo/services" />
-        <item itemvalue="Go Test.Test_FutureContractIndex in Futures-Go-demo/services" />
+        <item itemvalue="Go Test.Test_Websocket_order in Futures-Go-demo/services" />
+        <item itemvalue="Go Build.go build ws_order.go" />
+        <item itemvalue="Go Test.Test_FutureContractOrder in Futures-Go-demo/services" />
+        <item itemvalue="Go Test.Test_FutureContractOpenorders in Futures-Go-demo/services" />
       </list>
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="Test_FutureContractIndex_in_Futures-Go-demo_services - 2018.12.24 at 14h 32m 12s.xml">
-      <configuration name="Test_FutureContractIndex in Futures-Go-demo/services" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_FutureContractIndex_in_Futures-Go-demo_services - 2018.12.24 at 14h 32m 32s.xml">
-      <configuration name="Test_FutureContractIndex in Futures-Go-demo/services" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_FutureContractIndex_in_Futures-Go-demo_services - 2018.12.24 at 14h 33m 15s.xml">
-      <configuration name="Test_FutureContractIndex in Futures-Go-demo/services" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_FutureContractIndex_in_Futures-Go-demo_services - 2018.12.24 at 14h 33m 53s.xml">
-      <configuration name="Test_FutureContractIndex in Futures-Go-demo/services" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_FutureContractIndex_in_Futures-Go-demo_services - 2018.12.24 at 14h 34m 08s.xml">
-      <configuration name="Test_FutureContractIndex in Futures-Go-demo/services" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_FutureContractIndex_in_Futures-Go-demo_services - 2018.12.24 at 14h 35m 33s.xml">
-      <configuration name="Test_FutureContractIndex in Futures-Go-demo/services" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_FutureContractOrderDetail_in_Futures-Go-demo_services - 2019.01.02 at 17h 35m 39s.xml">
-      <configuration name="Test_FutureContractOrderDetail in Futures-Go-demo/services" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="Test_FutureContractOrderDetail_in_Futures-Go-demo_services - 2019.01.02 at 17h 37m 34s.xml">
-      <configuration name="Test_FutureContractOrderDetail in Futures-Go-demo/services" configurationId="GoTestRunConfiguration" />
-    </history-entry>
     <history-entry file="Test_FutureContractOrderDetail_in_Futures-Go-demo_services - 2019.01.02 at 17h 38m 08s.xml">
       <configuration name="Test_FutureContractOrderDetail in Futures-Go-demo/services" configurationId="GoTestRunConfiguration" />
     </history-entry>
     <history-entry file="Test_FutureContractOrderDetail_in_Futures-Go-demo_services - 2019.01.02 at 17h 38m 16s.xml">
       <configuration name="Test_FutureContractOrderDetail in Futures-Go-demo/services" configurationId="GoTestRunConfiguration" />
     </history-entry>
+    <history-entry file="Test_FutureContractHisorders_in_Futures-Go-demo_services - 2019.01.24 at 15h 22m 58s.xml">
+      <configuration name="Test_FutureContractHisorders in Futures-Go-demo/services" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_FutureContractHisorders_in_Futures-Go-demo_services - 2019.01.24 at 15h 24m 47s.xml">
+      <configuration name="Test_FutureContractHisorders in Futures-Go-demo/services" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_FutureContractHisorders_in_Futures-Go-demo_services - 2019.01.24 at 15h 29m 32s.xml">
+      <configuration name="Test_FutureContractHisorders in Futures-Go-demo/services" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_FutureContractOpenorders_in_Futures-Go-demo_services - 2019.03.25 at 14h 29m 37s.xml">
+      <configuration name="Test_FutureContractOpenorders in Futures-Go-demo/services" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_FutureContractOrder_in_Futures-Go-demo_services - 2019.03.25 at 14h 29m 48s.xml">
+      <configuration name="Test_FutureContractOrder in Futures-Go-demo/services" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_FutureContractOrder_in_Futures-Go-demo_services - 2019.03.25 at 14h 30m 04s.xml">
+      <configuration name="Test_FutureContractOrder in Futures-Go-demo/services" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_Websocket_order_in_Futures-Go-demo_services - 2019.04.09 at 17h 24m 17s.xml">
+      <configuration name="Test_Websocket_order in Futures-Go-demo/services" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="Test_Websocket_order_in_Futures-Go-demo_services - 2019.04.09 at 17h 24m 49s.xml">
+      <configuration name="Test_Websocket_order in Futures-Go-demo/services" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="847" extended-state="0" />
+    <frame x="110" y="34" width="1287" height="836" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33619457" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21044177" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49959838" weight="0.32974428" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.11646587" side_tool="true" weight="0.30282637" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.6305221" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.88353413" weight="0.9079838" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39946738" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49959838" weight="0.32839838" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.0" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -340,114 +381,23 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="18" />
     </breakpoint-manager>
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>subMessage</expression-string>
+        <language-id>go</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/services/Market.go">
+    <entry file="file:///usr/local/Cellar/go/1.10.2/libexec/src/runtime/append_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#18#91#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/untils/Untils.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2325">
-          <caret line="169" column="32" selection-start-line="169" selection-start-column="32" selection-end-line="169" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/websocket/ws.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2340">
-          <caret line="160" column="6" selection-start-line="160" selection-start-column="6" selection-end-line="160" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/Market.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#18#91#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/untils/Untils.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2325">
-          <caret line="169" column="32" selection-start-line="169" selection-start-column="32" selection-end-line="169" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/websocket/ws.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2340">
-          <caret line="160" column="6" selection-start-line="160" selection-start-column="6" selection-end-line="160" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/Market.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#18#91#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="59" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/untils/Untils.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2325">
-          <caret line="169" column="32" selection-start-line="169" selection-start-column="32" selection-end-line="169" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/websocket/ws.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+        <state relative-caret-position="1125">
+          <caret line="75" column="28" lean-forward="true" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -462,9 +412,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#18#91#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -500,9 +447,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#18#91#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -538,9 +482,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#18#91#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -576,9 +517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#18#91#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -614,9 +552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#18#91#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -648,23 +583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/untils/CryptoUtil.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="e#16#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="19" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gopkg.lock">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -673,63 +591,164 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/websocket/ws_benchmark0120.go" />
-    <entry file="file://$PROJECT_DIR$/config/config.go">
+    <entry file="file:///usr/local/Cellar/go/1.10.2/libexec/src/archive/tar/common.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="33">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/untils/Untils.go">
+    <entry file="file:///usr/local/Cellar/go/1.10.2/libexec/src/fmt/doc.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4605">
-          <caret line="320" column="16" selection-start-line="320" selection-start-column="16" selection-end-line="320" selection-end-column="16" />
+        <state relative-caret-position="486">
+          <caret line="325" column="8" selection-start-line="325" selection-start-column="8" selection-end-line="330" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/Market_test.go">
+    <entry file="file:///usr/local/Cellar/go/1.10.2/libexec/src/fmt/example_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="113" column="57" selection-start-line="113" selection-start-column="57" selection-end-line="113" selection-end-column="57" />
+        <state relative-caret-position="375">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.10.2/libexec/src/fmt/fmt_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7986">
+          <caret line="596" column="17" selection-start-line="596" selection-start-column="11" selection-end-line="596" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.10.2/libexec/src/flag/flag.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1372" />
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.10.2/libexec/src/flag/flag_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1706" />
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.10.2/libexec/src/runtime/crash_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="66" column="57" lean-forward="true" selection-start-line="66" selection-start-column="57" selection-end-line="66" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.10.2/libexec/src/runtime/chan_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="242" column="16" selection-start-line="242" selection-start-column="12" selection-end-line="242" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.10.2/libexec/src/flag/example_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="36" column="57" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.10.2/libexec/src/runtime/append_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="75" column="28" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/untils/CryptoUtil.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
-            <element signature="e#18#83#0" expanded="true" />
+            <element signature="e#16#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/main.go">
+    <entry file="file:///usr/local/Cellar/go/1.10.2/libexec/src/net/url/url.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
-          <caret line="160" selection-start-line="160" selection-end-line="160" />
+        <state relative-caret-position="180">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/websocket/ws.go">
+    <entry file="file://$PROJECT_DIR$/websocket/ws_order_ip.go" />
+    <entry file="file://$PROJECT_DIR$/services/Market_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-57">
-          <caret line="113" column="79" selection-start-line="113" selection-start-column="79" selection-end-line="113" selection-end-column="79" />
+        <state relative-caret-position="1650">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/Market.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1609">
+          <caret line="300" column="5" selection-start-line="300" selection-start-column="5" selection-end-line="300" selection-end-column="5" />
           <folding>
-            <element signature="e#19#158#0" expanded="true" />
+            <element signature="e#18#91#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/websocket/ws_new.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="175" column="79" selection-start-line="175" selection-start-column="79" selection-end-line="175" selection-end-column="79" />
+        <state relative-caret-position="-346">
+          <caret line="218" column="5" selection-start-line="218" selection-start-column="5" selection-end-line="218" selection-end-column="5" />
           <folding>
-            <element signature="e#19#225#0" expanded="true" />
+            <element signature="e#19#222#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/Market.go">
+    <entry file="file://$PROJECT_DIR$/websocket/ws.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="90" column="7" selection-start-line="90" selection-start-column="7" selection-end-line="90" selection-end-column="7" />
+        <state relative-caret-position="675">
+          <caret line="55" selection-start-line="55" selection-end-line="61" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
           <folding>
-            <element signature="e#18#91#0" expanded="true" />
+            <element signature="e#14#96#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/untils/Untils.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="162" column="5" selection-start-line="162" selection-start-column="5" selection-end-line="162" selection-end-column="5" />
+          <folding>
+            <element signature="e#16#190#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/websocket/ws_order.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+          <folding>
+            <element signature="e#19#127#0" expanded="true" />
           </folding>
         </state>
       </provider>

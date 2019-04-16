@@ -1,10 +1,11 @@
 package services
 
 import (
+	"Futures-Go-demo/config"
+	"Futures-Go-demo/websocket"
 	"fmt"
 	"testing"
 	"time"
-	"Futures-Go-demo/websocket"
 )
 
 //测试获取合约信息接口
@@ -53,7 +54,7 @@ func Test_FutureContractOpenorders(t *testing.T) {
 
 //获取合约历史委托
 func Test_FutureContractHisorders(t *testing.T) {
-	contract_hisorders := FutureContractHisorders("BTC", "0", "1", "0", "90", "1", "20")
+	contract_hisorders := FutureContractHisorders("BTC", "0", "1", "0", "90", "1", "50")
 	fmt.Println("获取合约历史委托: ", contract_hisorders)
 	time.Sleep(time.Second)
 
@@ -110,6 +111,12 @@ func Test_FutureContractBatchorder(t *testing.T) {
 
 //测试 WebSocket 行情,交易 API
 func Test_Websocket(t *testing.T) {
-	websocket.WSRun()   //无需本地IP地址，直接运行
-	//websocket.WSRunWithIP(config.Local_IP)  //配置文件须填写本地IP地址，WS运行太久，外部原因可能断开，支持自动重连
+	//websocket.WSRun()   //无需本地IP地址，直接运行
+	websocket.WSRunWithIP(config.Local_IP) //配置文件须填写本地IP地址，WS运行太久，外部原因可能断开，支持自动重连
+}
+
+//测试 WebSocket 订单推送 API
+func Test_Websocket_order(t *testing.T) {
+
+	websocket.WSWithOrder()
 }

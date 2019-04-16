@@ -1,10 +1,10 @@
 package websocket
 
 import (
+	"Futures-Go-demo/config"
 	"bytes"
 	"compress/gzip"
-	"encoding/binary"
-	//"flag"
+	"encoding/binary" //"flag"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -12,11 +12,8 @@ import (
 	"net"
 	"time"
 
-	"github.com/spf13/cast"
-
 	"github.com/gorilla/websocket"
-
-	"Futures-Go-demo/config"
+	"github.com/spf13/cast"
 )
 
 type Message struct {
@@ -35,7 +32,6 @@ type Client struct {
 
 var (
 	localIP string
-
 )
 
 type Moniter struct {
@@ -60,7 +56,6 @@ func InitMoniter() {
 			case <-mon.subChan:
 				mon.clientNum--
 
-
 			}
 		}
 	}()
@@ -83,10 +78,6 @@ func NowSec() int {
 }
 
 func (cli *Client) RunClient() {
-
-
-
-
 
 	AddClientNum()
 	dialer := websocket.DefaultDialer
@@ -116,7 +107,6 @@ func (cli *Client) RunClient() {
 		c.Close()
 		SubClientNum()
 	}()
-
 
 	//===============================================================================
 
@@ -156,10 +146,10 @@ func (cli *Client) RunClient() {
 
 	//订阅websocket Market Depth 数据
 	/*
-			  "market.$symbol.depth.$type"
-			 symbol	true	string	交易对		如"BTC_CW"表示BTC当周合约，"BTC_NW"表示BTC次周合约，"BTC_CQ"表示BTC季度合约.
-	        type	true	string	Depth 类型	(150档数据)	step0, step1, step2, step3, step4, step5（合并深度1-5）；step0时，不合并深度
-	                                            (20档数据)  step6, step7, step8, step9, step10, step11（合并深度7-11）；step6时，不合并深度
+				  "market.$symbol.depth.$type"
+				 symbol	true	string	交易对		如"BTC_CW"表示BTC当周合约，"BTC_NW"表示BTC次周合约，"BTC_CQ"表示BTC季度合约.
+		        type	true	string	Depth 类型	(150档数据)	step0, step1, step2, step3, step4, step5（合并深度1-5）；step0时，不合并深度
+		                                            (20档数据)  step6, step7, step8, step9, step10, step11（合并深度7-11）；step6时，不合并深度
 	*/
 
 	message = []byte("{\"Sub\":\"market.BTC_CW.depth.step0\"}")
@@ -168,18 +158,14 @@ func (cli *Client) RunClient() {
 		log.Println("write err :", err)
 	}
 
-
 	//请求websocket KLine 数据
 	/*
 			  "market.$symbol.kline.$period"
 			 symbol	true	string	交易对		如"BTC_CW"表示BTC当周合约，"BTC_NW"表示BTC次周合约，"BTC_CQ"表示BTC季度合约
 		     period	true	string	K线周期		1min, 5min, 15min, 30min, 60min,4hour,1day, 1mon
-
 			"from": "optional, type: long, 2017-07-28T00:00:00+08:00 至2050-01-01T00:00:00+08:00 之间的时间点，单位：秒",
 		  	"to": "optional, type: long, 2017-07-28T00:00:00+08:00 至2050-01-01T00:00:00+08:00 之间的时间点，单位：秒，必须比 from 大"}
-
 			[t1, t5] 假设有 t1  ~ t5 的K线：
-
 			from: t1, to: t5, return [t1, t5].
 			from: t5, to: t1, which t5  > t1, return [].
 			from: t5, return [t5].
@@ -193,8 +179,6 @@ func (cli *Client) RunClient() {
 	if err != nil {
 		log.Println("write err :", err)
 	}
-
-
 
 	go func() {
 
@@ -221,22 +205,18 @@ func (cli *Client) RunClient() {
 			return
 		}
 
-
-            msg, err := parseGzip(zipmsg)
-			if err != nil {
-				log.Println("gzip Error : ", err)
-			}
-			log.Println(string(msg[:]))
-
+		msg, err := parseGzip(zipmsg)
+		if err != nil {
+			log.Println("gzip Error : ", err)
+		}
+		log.Println(string(msg[:]))
 
 	}
 }
 
-
 var address string
 
 func WSRunWithIP(ip string) {
-
 
 	address = config.WS_URL
 
@@ -246,7 +226,6 @@ func WSRunWithIP(ip string) {
 
 	createClient(address)
 	time.Sleep(1 * time.Millisecond)
-
 
 	reCreateClient()
 
@@ -263,10 +242,9 @@ func reCreateClient() {
 			select {
 			case <-checkTicker.C:
 
+				if mon.clientNum <= 0 {
 
-				if  mon.clientNum <= 0 {
-
-						createClient(address)
+					createClient(address)
 
 				}
 			}

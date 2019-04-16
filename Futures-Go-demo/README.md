@@ -1,5 +1,7 @@
 # HBDM - Go Language
-包含 WebSocket 行情,交易 API ;  REST 行情,交易 API
+包含 WebSocket 行情,交易 API ;
+    WebSocket 订单推送 API ;
+    REST 行情,交易 API
 
 ## 依赖管理 
 支持Dep和Glide管理依赖
